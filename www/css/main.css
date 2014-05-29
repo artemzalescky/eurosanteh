@@ -1,0 +1,415 @@
+@charset "utf-8";
+/* css document
+   main containers*/
+   
+* {
+	padding:0;	/* удаляем изначальные отступы*/
+	margin:0;
+}
+
+img {	/* убираем косяк с рамкой вокруг картинки в IE8- */
+	border: none;
+}
+
+html,body{
+	padding:0;
+	margin:0;
+	height:100%;
+	width:100%;
+	min-width:1000px;	/* ширина контейнера*/
+	font-family: Arial;
+	
+	/*background-color:#151515;	/* косяк с нижней полоской (чтоб не так выделялась)*/
+}
+
+/************ top menu *********************************/
+#top{
+	background-color:#333;
+	height:45px;
+}
+#top_menu{
+	margin-left:150px;
+	height:40px;
+	width:700px;
+	float:left;
+}
+			/* верхнее меню*/
+#top_menu ul {
+	list-style:none;  /* убрать точки из списка*/
+	display:inline-table;	
+	margin:12px;
+}
+#top_menu ul li {
+	display:inline;		/* пункты в одну строку*/
+	margin-left:15px;
+	padding-left:15px;
+	vertical-align:middle;
+}
+#top_menu ul li a {
+	text-decoration:none;
+	color:#00D1EF;
+	font:  14px Arial, Helvetica, sans-serif;
+		/* css3*/
+	transition:color 0.35s;
+	-webkit-transition:color 0.35s; /* Safari Chrome */
+}
+#top_menu ul li a:hover{	/* при наведении мыши на ссылку*/
+	color:#FFF;
+	/*border-bottom: 1px solid #EE0000;*/
+}
+
+#div_contacts{
+	height:inherit;
+	width:250px;
+	background-color:#252525;
+	float:left;
+	position:absolute;	/* положение не зависит от остальных элементов и наоборот*/
+	margin-left:700px;
+	z-index:100;
+	overflow: hidden;
+	
+		/*  анимация css3*/	
+	transition:height 0.7s;
+	-webkit-transition:height 0.7s; /* Safari Chrome */
+}
+#div_contacts:hover{
+	height:250px;
+}
+#div_contacts a{
+	text-decoration:none;
+	color:#00D1EF;
+	font:  14px Arial, Helvetica, sans-serif;
+		/* css3*/
+}
+/***********************************************************************************************/
+
+
+/************************* header *************************************/
+#header{
+	height:100px;	
+	background-color:#505050;
+}
+#logo{
+	width:500px;
+	margin-top:20px;
+	margin-left:80px;
+	float:left;	
+}
+#logo a : hover{
+	border:5px solid #FF0000;
+}
+
+
+#smalcart{		/* маленькая корзина */
+    float:right;
+	color:#AEEEFF;
+	background-color:#222;
+	border:solid 1px #222;
+	
+	font-family:"Trebuchet MS", Arial, Helvetica,sans-serif;
+	font-size:15px;
+	
+    height:78px;
+	width:200px;
+    padding: 10px;
+    padding-left:30px;
+	z-index:100;
+   
+   transition: width 0.5s , border 0.5s , background-color 0.5s;
+   -webkit-transition: width 0.5s , border 0.5s , background-color 0.5s; /* Safari Chrome */
+}
+#smalcart:hover{
+	border:solid 1px #AEEEFF;
+	background-color:#333;
+	width:250px;
+	
+}
+#smalcart h3{	/* заголовок Корзины */
+	font-size:18px;
+	color:#0ECAF0;  
+	margin-top:2px;
+}
+/*************************************************************/
+
+
+
+/***************** главное меню ****************/	
+	#menu, #menu ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		z-index:100;
+	}
+	
+	#menu {
+		margin: 0px;
+		background-color: #333;
+	}
+	
+	/*отключаем обтекание*/
+	#menu:before,
+	#menu:after {
+		content: "";
+		display: table;
+	}
+	
+	#menu:after {
+		clear: both;
+	}
+	
+	#menu {
+		zoom:1;
+	}
+	/*отключили обтекание*/
+	
+	#menu li {
+		float:left;
+		display:block;
+		border-right: 1px solid #222;
+		-moz-box-shadow: 1px 0 0 #444;
+		-webkit-box-shadow: 1px 0 0 #444;
+		box-shadow: 1px 0 0 #444;
+		position: relative;
+	}
+	
+	#menu a {
+		float: left;
+		padding: 15px 40px;
+		color: #A3EEFF;		
+		font: bold 12px Arial, Helvetica;
+		text-decoration: none;
+		/*text-shadow: 0 1px 0 #000; *//*небольшая тень*/
+	}
+	
+	#menu li:hover > a {
+		color: #fafafa;
+		/*background-color:#ff7700;*/
+		
+	}
+	
+	*html #menu li a:hover { /* Только для IE6 */
+		color: #fafafa;
+		/*background-color:#ff7700;*/
+	}
+	
+	#menu ul {
+		margin: 100px 0 0 0; /*скарость с которой появляется меню*/
+		_margin: 0; /*Только для IE6*/
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 45px;
+		left: 0;
+		z-index: 9999;    
+		background: #444;
+	}
+
+	#menu li:hover > ul {
+		opacity: 1;		
+		visibility: visible;
+		margin: 0;
+	}
+	
+	#menu ul ul {
+		top: 0;
+		left: 200px;
+		margin: 0 0 0 100px;
+		_margin: 0; /*Только для IE6*/
+		-moz-box-shadow: -1px 0 0 rgba(255,255,255,.3);
+		-webkit-box-shadow: -1px 0 0 rgba(255,255,255,.3);
+		box-shadow: -1px 0 0 rgba(255,255,255,.3);		
+	}
+	
+	#menu ul li {
+		float: none;
+		display: block;
+		border: 0;
+		_line-height: 0; /*Только для IE6*/
+		-moz-box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+		-webkit-box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+		box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+	}
+	
+	#menu ul li:last-child {   
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;    
+	}
+	
+	#menu ul a {    
+		padding: 10px;
+		width: 180px;
+		_height: 50px; /*Только для IE6*/
+		display: block;
+		white-space: nowrap;
+		float: none;
+		text-transform: none;
+	}
+	
+	#menu ul li:first-child > a {
+		-moz-border-radius: 3px 3px 0 0;
+		-webkit-border-radius: 3px 3px 0 0;
+		border-radius: 3px 3px 0 0;
+	}
+	
+	/*рисуется значок*/
+	#menu ul li:first-child > a:after {
+		content: '';
+		position: absolute;
+		left: 40px;
+		top: -6px;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-bottom: 6px solid #0ECAF0;
+	}
+	
+	#menu ul ul li:first-child a:after {
+		left: -6px;
+		top: 50%;
+		margin-top: -6px;
+		border-left: 0;	
+		border-bottom: 6px solid transparent;
+		border-top: 6px solid transparent;
+		border-right: 6px solid #0ECAF0;
+	}
+	
+	#menu ul li:first-child a:hover:after {
+		border-bottom-color: #0ECAF0; 
+	}
+	
+	#menu ul ul li:first-child a:hover:after {
+		border-right-color: #0ECAF0; 
+		border-bottom-color: transparent; 	
+	}
+	
+	#menu ul li:last-child > a {
+		-moz-border-radius: 0 0 3px 3px;
+		-webkit-border-radius: 0 0 3px 3px;
+		border-radius: 0 0 3px 3px;
+	}
+	#menu ul li a:hover{
+		color:#FFF;
+		border: 1px solid #99;
+		background-color:#252525;
+	}
+/*Закончили Работать с блоком в котором находится меню*/
+
+
+
+/**************** контейнер ********************/
+#background{
+	width:100%;
+	background-color:#fff;
+}
+#container{
+	width:1000px;
+	margin:0 auto;  /* сверху/снизу - 0 справа/слева -равны*/
+	padding-top:20px;
+	padding-bottom:20px;
+	display:table;
+	min-height:300px;
+}
+.template{			/* один кусок*/
+	min-height:150px;
+	width:270px;
+	background-color:#F8F8F8;
+	float:left;
+	margin:10px 10px;
+	padding:20px;	
+	padding-left:10px;
+	
+	transition:background-color 1s;
+	-webkit-transition:background-color 0.8s; /* Safari Chrome */
+}
+.template img{
+margin:auto;
+height:170px;
+width:280px;}
+.template:hover
+{
+	background-color:#A3EEFF;
+}
+.font{
+	font: bold 15px Arial, Helvetica;
+	color:#999999;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.template li a{
+	color:#072328;
+	font: bold 14px Arial, Helvetica;
+	text-decoration:none;
+}
+/*********************/
+
+
+/******* Бренды *********/
+.brands{
+	margin-top:50px;
+	padding-top:10px;
+	height:0px;
+	display:inline-table;
+}
+.brands h1{
+	font-family:"Times New Roman", Times, serif;
+	font-size:22px;
+}
+.brand{
+	float:left;	
+	text-align:center;
+	padding: 10px;
+	width:155px;
+	height:80px;
+	margin: 10px;	
+
+	-webkit-box-shadow:0 0 15px rgba(0,0,0,.35);
+	-moz-boz-shadow: 0 0 15px rgba(0,0,0,.35);
+	box-shadow:0 0 15px rgba(0,0,0,.35);	
+}
+
+.brand img{
+	height:70px;
+	width:150px;
+}
+
+
+/********  footer ************/
+#footer{
+	min-height:90px;
+	background-color:#222;
+	padding-top:5px;
+	border-bottom:2px solid #00a0bc;
+}
+#footer_container{
+	width:1000px;
+	margin:0 auto;  /* сверху/снизу - 0 справа/слева -равны*/
+	margin-top:20px;
+	background-color:#222;
+	padding-top:20px;
+	padding-bottom:30px;
+	display:table;
+	border-top:1px solid #00a0bc;
+}
+#footer_ip{
+	background-color:#222;
+	color:#999999;
+	min-height:20px;
+	width:200px;
+	float:left;
+}
+#footer_contacts{
+	background-color:#222;
+	color:#999999;
+	min-height:20px;
+	width:300px;
+	float:left;
+	margin-left:30px;
+}
+#footer_mail{
+	background-color:#222;
+	color:#999999;
+	min-height:20px;
+	width:300px;
+	float:left;
+	margin-left:20px;
+}

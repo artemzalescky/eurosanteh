@@ -1,0 +1,37 @@
+/* контейнер с продуктами */
+
+#product_container{		/* здесь вся ин-фа о продукте*/
+	min-height:100px;
+}
+#product_container_title{	/* блок с названием товара*/
+	font-family:Arial;
+	color:#000066;
+	padding-left:300px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+#product_container_image{	/* контейнер с картинкой*/
+	float:left;
+	min-height:50px;
+	width:400px;
+	padding-right:100px;
+}
+#product_container_image img{	/* ставим максимальные размеры самой картинки */
+	max-width:300px;
+}
+
+#product_container_description{  /* контейнер с описанием*/
+	float:left;
+	min-height:50px;
+	width:500px;
+}
+#product_container_description div{		/* строки в описании */
+	margin-top:20px;
+	margin-bottom:5px;
+	font: 14px Arial;
+}
+#product_container_footer{	/*снизу полоса*/
+	min-height:40px;
+	float:left;
+	width:1000px;
+}

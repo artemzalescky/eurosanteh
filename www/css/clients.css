@@ -1,0 +1,18 @@
+@charset "utf-8";
+.{
+padding:0;
+margin:0;}
+
+.zagolovok_client h1{
+font:"Times New Roman", Times, serif;
+font-size:30px;}
+
+.instruction_client{
+margin-left:10px;}
+.instruction_client ol{
+list-style-type:decimal;
+}
+
+.instruction_client ol li{
+line-height:1.4;}
+

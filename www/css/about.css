@@ -1,0 +1,40 @@
+@charset "utf-8";
+.{
+padding:0;
+margin:0;}
+
+.title_name_about span p{
+color:#FF0000;
+font-size:15px;}
+.brands_about{
+padding-top:20px;
+}
+
+.brands_about h1{
+font-family:"Times New Roman", Times, serif;
+font-size:22px;}
+
+
+.brand_about{
+	float:left;	
+	text-align:center;
+	padding: 10px;
+	width:155px;
+	height:80px;
+	margin: 10px;	
+
+-webkit-box-shadow:0 0 15px rgba(0,0,0,.35);
+-moz-boz-shadow: 0 0 15px rgba(0,0,0,.35);
+box-shadow:0 0 15px rgba(0,0,0,.35);	
+}
+
+.brand_about img{
+height:70px;
+width:150px;
+}
+
+.text_about{
+padding-top:20px;
+clear:both;
+}
+

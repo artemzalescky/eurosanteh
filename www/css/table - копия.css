@@ -1,0 +1,78 @@
+@charset "utf-8";
+.{
+	padding:0;
+	margin:0;
+}
+
+/*работа над фотографией*/
+#customers_pictures{
+	margin-left:20px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	height:100px;
+	width:250px;
+	border-collapse:collapse;
+	float:left;
+}
+#customers_pictures img{	/* ограничиваем максимальную высоту картинки*/
+	max-width:200px;
+}
+
+/*Надпись над таблицей*/
+.table_name{
+	clear:both;
+	margin-left:5px;
+	margin-top:10px;
+	margin-bottom:20px;
+	
+	font-family:"Trebuchet MS", Arial, Helvetica,sans-serif;
+	font-size:18px;
+	color:#039;
+}
+
+/*работа с таблицей*/
+#customers{
+	margin-left:20px;
+	font-family:"Trebuchet MS", Arial, Helvetica,sans-serif;
+	width:700px;
+	border-collapse:collapse;
+	float:left;
+	position:static;
+	overflow: visible;
+	text-align:center;
+}
+#customers a{
+	text-decoration:none;
+	color:#000082;
+}
+#customers td, #customers th {
+	font-size:1.0em;
+	border:1px solid #005efe;
+	padding:3px 7px 3px 7px;
+}
+#customers th {
+	font-size:1.2em;
+	text-align:left;
+	padding-top:5px;
+	padding-bottom:5px;
+	background-color:#90b0dd;
+	color:#fff;
+} 
+#customers tr.alt td{
+	color:#000;
+	background-color:#EAF2D3;
+}
+
+/*поле ввода количества*/
+.add_input{
+	float:left;
+	width:40px;
+	height:20px;
+	margin-right:5px;
+	margin-top:2px;
+	border-radius:3px; 
+	text-align:center; 
+	color:#009;
+}
+
+
+/*кнопка в корзину в product_list.css*/
